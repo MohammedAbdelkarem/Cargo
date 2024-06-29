@@ -1,4 +1,4 @@
-
+import * as THREE from "three";
 export class buoyant {
 
     constructor(){
@@ -7,7 +7,7 @@ export class buoyant {
         this.M = 185000; //kg
     }
     
-    calculateBuoyant(mass){
+    calculateBuoyant(mass , temperature){
         const direction = new THREE.Vector3(0, 1, 0);
         const ans = this.G * this.waterDensity(temperature) * this.calculateVsub(mass + this.M);
         const forceVector = direction.multiplyScalar(ans);

@@ -1,4 +1,5 @@
 import { buoyant } from "../../Forces/buoyant";
+import * as THREE from "three";
 
 export class drug{
 
